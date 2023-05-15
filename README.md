@@ -5,3 +5,8 @@
 
 ### LATEST BUILD STATUS
 [![Java CI with Maven](https://github.com/romano001/assignment-2-mtss/actions/workflows/build.yml/badge.svg)](https://github.com/romano001/assignment-2-mtss/actions/workflows/build.yml)
+
+### LATEST CODE COVERAGE CHECK
+[![Code coverage with Jacoco](https://github.com/romano001/assignment-2-mtss/actions/workflows/code-coverage.yml/badge.svg)](https://github.com/romano001/assignment-2-mtss/actions/workflows/code-coverage.yml)
+
+
