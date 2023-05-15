@@ -9,7 +9,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
-        java-version: '17'
+        java-version: 8.0.332+9
         cache: 'maven'
     - name: Checkstyle with Maven
       run: mvn -B checkstyle:check --file ./roman-number/pom.xml
