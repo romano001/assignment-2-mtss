@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>IntegerToRoman.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">roman-number</a> &gt; <a href="index.source.html" class="el_package">it.unipd.mtss</a> &gt; <span class="el_source">IntegerToRoman.java</span></div><h1>IntegerToRoman.java</h1><pre class="source lang-java linenums">////////////////////////////////////////////////////////////////////
+// Davide Romano 2008652
+// Manuele Bonato 1201121
+////////////////////////////////////////////////////////////////////
+package it.unipd.mtss;
+
+<span class="nc" id="L7">public class IntegerToRoman {</span>
+    public static String convert(int number) throws IllegalArgumentException {
+<span class="fc" id="L9">        String roman = &quot;&quot;;</span>
+<span class="fc bfc" id="L10" title="All 4 branches covered.">        if (number &gt; 1000 || number &lt; 1) {</span>
+<span class="fc" id="L11">            throw new IllegalArgumentException(number + &quot; is not valid&quot;);</span>
+        }
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        while (number != 0) {</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">            if (number &lt; 4) {</span>
+<span class="fc" id="L15">                roman += &quot;i&quot;;</span>
+<span class="fc" id="L16">                number--;</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">            } else if (number &lt; 5) {</span>
+<span class="fc" id="L18">                roman += &quot;iv&quot;;</span>
+<span class="fc" id="L19">                number -= 4;</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">            } else if (number &lt; 9) {</span>
+<span class="fc" id="L21">                roman += &quot;v&quot;;</span>
+<span class="fc" id="L22">                number -= 5;</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">            } else if (number &lt; 10) {</span>
+<span class="fc" id="L24">                roman += &quot;ix&quot;;</span>
+<span class="fc" id="L25">                number -= 9;</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">            } else if (number &lt; 40) {</span>
+<span class="fc" id="L27">                roman += &quot;x&quot;;</span>
+<span class="fc" id="L28">                number -= 10;</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">            } else if (number &lt; 50) {</span>
+<span class="fc" id="L30">                roman += &quot;xl&quot;;</span>
+<span class="fc" id="L31">                number -= 40;</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">            } else if (number &lt; 90) {</span>
+<span class="fc" id="L33">                roman += &quot;l&quot;;</span>
+<span class="fc" id="L34">                number -= 50;</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">            } else if (number &lt; 100) {</span>
+<span class="fc" id="L36">                roman += &quot;xc&quot;;</span>
+<span class="fc" id="L37">                number -= 90;</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">            } else if (number &lt; 400) {</span>
+<span class="fc" id="L39">                roman += &quot;c&quot;;</span>
+<span class="fc" id="L40">                number -= 100;</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">            } else if (number &lt; 500) {</span>
+<span class="fc" id="L42">                roman += &quot;cd&quot;;</span>
+<span class="fc" id="L43">                number -= 400;</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">            } else if (number &lt; 900) {</span>
+<span class="fc" id="L45">                roman += &quot;d&quot;;</span>
+<span class="fc" id="L46">                number -= 500;</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            } else if (number &lt; 1000) {</span>
+<span class="fc" id="L48">                roman += &quot;cm&quot;;</span>
+<span class="fc" id="L49">                number -= 900;</span>
+            } else {
+<span class="fc" id="L51">                roman += &quot;m&quot;;</span>
+<span class="fc" id="L52">                number -= 1000;</span>
+            }
+        }
+<span class="fc" id="L55">        return roman;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
