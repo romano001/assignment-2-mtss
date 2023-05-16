@@ -17,8 +17,9 @@ public class RomanPrinter {
                     valid=true;
                 }
             }
-            if (!valid)
+            if (!valid){
                 throw new IllegalArgumentException("invalid input");
+            }
         }
         String[][] romanArt={{
                     " _____ ",
